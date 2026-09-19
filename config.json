@@ -1,0 +1,54 @@
+{
+  "app_name": "Task Automation Suite",
+  "version": "1.0.0",
+  "log_level": "INFO",
+  "file_organizer": {
+    "target_dir": "./downloads_demo",
+    "extension_map": {
+      "Documents": [".pdf", ".docx", ".doc", ".txt", ".xlsx", ".pptx", ".csv"],
+      "Images": [".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp"],
+      "Videos": [".mp4", ".mkv", ".mov", ".avi"],
+      "Audio": [".mp3", ".wav", ".flac"],
+      "Archives": [".zip", ".tar", ".gz", ".7z", ".rar"],
+      "Code": [".py", ".js", ".html", ".css", ".json", ".md"]
+    },
+    "temp_patterns": [".tmp", ".bak", ".log"]
+  },
+  "pdf_processor": {
+    "sample_output_dir": "./pdf_output"
+  },
+  "web_scraper": {
+    "monitored_sites": [
+      {
+        "name": "Python.org News",
+        "url": "https://www.python.org/blogs/"
+      },
+      {
+        "name": "GitHub Status",
+        "url": "https://www.githubstatus.com/"
+      }
+    ]
+  },
+  "system_monitor": {
+    "cpu_threshold_percent": 85.0,
+    "memory_threshold_percent": 85.0,
+    "disk_threshold_percent": 90.0,
+    "backup_sources": ["./config.json"],
+    "backup_destination": "./backups"
+  },
+  "notifier": {
+    "enable_console": true,
+    "enable_email": false,
+    "smtp_server": "smtp.gmail.com",
+    "smtp_port": 587,
+    "sender_email": "",
+    "sender_password": "",
+    "recipient_email": "",
+    "webhook_url": ""
+  },
+  "scheduler": {
+    "auto_organize_interval_minutes": 60,
+    "system_check_interval_minutes": 30,
+    "web_scrape_interval_minutes": 15
+  }
+}
